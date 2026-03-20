@@ -15,7 +15,15 @@
 		<meta name="apple-mobile-web-app-title" content="Andreas" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+
 			@media (prefers-reduced-motion) {
+				html {
+					scroll-behavior: auto;
+				}
+
 				* {
 					animation-duration: 0s !important;
 					animation-delay: 0s !important;
@@ -89,6 +97,7 @@
 
 			h2 {
 				margin: 1.5rem 0;
+				scroll-margin-top: 1rem;
 
 				a {
 					font-size: 0.8em;
