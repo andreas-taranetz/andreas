@@ -597,5 +597,12 @@
 			</section>
 			<section aria-labelledby="questions-and-answers"></section>
 		</main>
+	<script>
+		document.querySelectorAll("h2 a").forEach((a) => {
+			a.addEventListener("click", () => {
+				navigator.clipboard?.writeText(a.href).catch(() => {});
+			});
+		});
+	</script>
 	</body>
 </html>
