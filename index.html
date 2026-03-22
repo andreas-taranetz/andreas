@@ -320,6 +320,38 @@
 					background-position: 0 0;
 				}
 			}
+
+			#link-copied {
+				position: fixed;
+				inset: unset;
+				position-anchor: --active-link;
+				top: calc(anchor(bottom) + 0.5rem);
+				justify-self: anchor-center;
+
+				background-color: var(--dark-surface);
+				color: var(--text-color);
+				border: 1px solid var(--link-color);
+				border-radius: 4px;
+				padding: 0.2rem 0.5rem;
+				font-size: 0.8rem;
+				font-family: inherit;
+				margin: 0;
+
+				opacity: 1;
+				transition:
+					opacity 0.2s ease-in-out,
+					display 0.2s allow-discrete;
+
+				&:not(:popover-open) {
+					opacity: 0;
+				}
+
+				@starting-style {
+					&:popover-open {
+						opacity: 0;
+					}
+				}
+			}
 		</style>
 	</head>
 
@@ -597,10 +629,20 @@
 			</section>
 			<section aria-labelledby="questions-and-answers"></section>
 		</main>
+	<div id="link-copied" popover>link copied</div>
 	<script>
+		const popover = document.getElementById("link-copied");
+		let hideTimeout;
+		let activeLink;
 		document.querySelectorAll("h2 a").forEach((a) => {
 			a.addEventListener("click", () => {
 				navigator.clipboard?.writeText(a.href).catch(() => {});
+				clearTimeout(hideTimeout);
+				if (activeLink) activeLink.style.anchorName = "";
+				activeLink = a;
+				a.style.anchorName = "--active-link";
+				popover.showPopover();
+				hideTimeout = setTimeout(() => popover.hidePopover(), 2000);
 			});
 		});
 	</script>
