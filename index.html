@@ -343,13 +343,13 @@
 						href="https://configure.zsa.io/voyager/layouts/rdYN7/latest/0"
 						target="_blank"
 						>split-keyboard user</a
-					>, and struggling to learn [lazy]vim keybindings.
+					>, and struggling to learn vim keybindings.
 				</p>
 				<p>
 					In my job at
 					<a href="https://www.dynatrace.com/" target="_blank">Dynatrace</a>
-					I drink&nbsp;coffee, ask too many&nbsp;questions, burn&nbsp;tokens, and
-					care a lot about maintainable software.
+					I drink&nbsp;coffee, ask too many&nbsp;questions, burn&nbsp;tokens,
+					and care a lot about maintainable software.
 				</p>
 				<p>
 					I'm perpetually learning and sharing my knowledge, so check out my
@@ -509,24 +509,44 @@
 			<section aria-labelledby="side-projects">
 				<h2 id="side-projects">
 					Fun Side Projects
-					<a href="#side-projects" aria-label="Link to the side projects section">🔗</a>
+					<a
+						href="#side-projects"
+						aria-label="Link to the side projects section"
+						>🔗</a
+					>
 				</h2>
 				<ul>
 					<li>
 						<h3>
-							<a target="_blank" href="https://github.com/andreas-taranetz/td">td <small>a todo list for terminal users</small></a>
+							<a target="_blank" href="https://github.com/andreas-taranetz/td"
+								>td <small>a todo list for terminal users</small></a
+							>
 						</h3>
 						<p>
-							There are many like it, but this one is mine.
-							100% vibe coded in Go using <a target="_blank" href="https://github.com/charmbracelet/bubbletea">bubbletea</a>.
+							There are many like it, but this one is mine. 100% vibe coded in
+							Go using
+							<a
+								target="_blank"
+								href="https://github.com/charmbracelet/bubbletea"
+								>bubbletea</a
+							>.
 							<q>The best todo list is the one you have in your terminal.</q>
 						</p>
 					</li>
 					<li>
 						<h3>
-							<a target="_blank" href="https://andreas-taranetz.github.io/slidev-addon-animated-text/">Animated Text Slidev Addon</a>
+							<a
+								target="_blank"
+								href="https://andreas-taranetz.github.io/slidev-addon-animated-text/"
+								>Animated Text Slidev Addon</a
+							>
 						</h3>
-							<p>I read about <a target="_blank" href="https://gkurt.com/tegaki/">tegaki</a>, which can animate any fonts, and thought I need this integrated in <a target="_blank" href="https://sli.dev/">sli.dev</a>.</p>
+						<p>
+							I read about
+							<a target="_blank" href="https://gkurt.com/tegaki/">tegaki</a>,
+							which can animate any fonts, and thought I need this integrated in
+							<a target="_blank" href="https://sli.dev/">sli.dev</a>.
+						</p>
 					</li>
 					<li>
 						<h3>
@@ -545,7 +565,10 @@
 					</li>
 					<li>
 						<h3>
-							<a target="_blank" href="https://andreas-taranetz.github.io/bad-date-picker/">
+							<a
+								target="_blank"
+								href="https://andreas-taranetz.github.io/bad-date-picker/"
+							>
 								Bad Date Picker
 							</a>
 						</h3>
@@ -614,12 +637,12 @@
 			</section>
 			<section aria-labelledby="questions-and-answers"></section>
 		</main>
-	<script>
-		document.querySelectorAll("h2 a").forEach((a) => {
-			a.addEventListener("click", () => {
-				navigator.clipboard?.writeText(a.href).catch(() => {});
+		<script>
+			document.querySelectorAll("h2 a").forEach((a) => {
+				a.addEventListener("click", () => {
+					navigator.clipboard?.writeText(a.href).catch(() => {});
+				});
 			});
-		});
-	</script>
+		</script>
 	</body>
 </html>
